@@ -1,24 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
   <!-- Head tag -->
-  <%- partial('_partial/head') %>
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Title -->
+  
+  <title>Python - 李想</title>
+
+  <!--Favicon-->
+  <link rel="icon" href="favicon/favicon.ico">
+
+  <!--Description-->
+  
+      <meta name="description" content="为什么学python呢？虽然现在一直都在学习java、框架、js，但是有时候也会疲劳，何不多看看别的语言的优点呢？python简洁易懂，写起来很快，看起来也明白。没事或者学习疲劳的时候看看python或者其他。
+如何学习呢？Python 开胃菜分分钟学会一门语言Python篇 哈哈哈哈哈哈
+
+慕课网">
+  
+
+  <!--Author-->
+  
+      <meta name="author" content="李想">
+  
+
+  <!-- Pure CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Open+Sans:300,800" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
 
   <body>
   	<div class="container-fluid navbar-container m-sm-5">
       <!-- Header -->
-      <%- partial('_partial/header') %>
+      <nav class="navbar navbar-toggleable-sm navbar-light px-1 py-3 my-3 mb-sm-5">
+  <a class="navbar-brand ml-2" href="/">李想</a>
+  <button class="navbar-toggler navbar-toggler-right py-2" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse text-center" id="navbarCollapse">
+    <ul class="navbar-nav ml-auto my-auto">
+      
+    </ul>
+    <hr class="hidden-md-up">
+  </div>
+</nav>
+
 
   		<div class="row">
-  			<%- body %>
+  			<div class="col-12 mb-4">
+  <img class="img-fluid project-img" src="/images/unsplash.jpg" alt="Python">
+</div>
+<div class="col-lg-4 col-12 pt-3 px-4 pr-lg-5">
+  <h1>Python</h1>
+</div>
+<div class="col-lg-8 col-12 pt-lg-3 mb-4 pl-lg-5 px-lg-0 px-4 portfolio-content">
+  <h1 id="为什么学python呢？"><a href="#为什么学python呢？" class="headerlink" title="为什么学python呢？"></a>为什么学python呢？</h1><p>虽然现在一直都在学习java、框架、js，但是有时候也会疲劳，何不多看看别的语言的优点呢？python简洁易懂，写起来很快，看起来也明白。没事或者学习疲劳的时候看看python或者其他。</p>
+<h1 id="如何学习呢？"><a href="#如何学习呢？" class="headerlink" title="如何学习呢？"></a>如何学习呢？</h1><h2 id="Python-开胃菜"><a href="#Python-开胃菜" class="headerlink" title="Python 开胃菜"></a>Python 开胃菜</h2><p><a href="http://www.code123.cc/1049.html" target="_blank" rel="noopener">分分钟学会一门语言Python篇 哈哈哈哈哈哈</a></p>
+<ol>
+<li>慕课网<br><a href="http://www.imooc.com/learn/177" target="_blank" rel="noopener">Python入门</a> 慕课网还是很不错的，没事的时候看一看，帮助还是挺大的。</li>
+<li>廖雪峰Python教程<br>看了廖大佬的教程，可以做使用开源比较成熟的开源框架做一点实践的项目或者demo，然后继续深入Web框架，比如Djiango</li>
+<li>正则表达式<br>正则表达式不只是Python的一部分。不管啥语言用处都很大，拥有自己独立的语法以及独立的处理引擎，效率可能不及自带的str方法，但是方法功能没得说。</li>
+<li>其他</li>
+</ol>
+<ul>
+<li><a href="http://blog.jobbole.com/43922/" target="_blank" rel="noopener">快速入门:十分钟就学会Python</a></li>
+<li><a href="http://www.code123.cc/135.html" target="_blank" rel="noopener">【干货】Python爬虫/文本处理/科学计算/机器学习/数据挖掘兵器谱</a></li>
+</ul>
+
+</div>
+
+
       </div>
-      <% if (page.total > 1) { %>
-    <nav class="page-nav">
-        <%- paginator({prev_text: '<', next_text: '>'}) %>
-    </nav>
-<% } %>
+      
   	</div>
 
     <!-- After footer scripts -->
-    <%- partial('_partial/footer') %>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
   </body>
 </html>

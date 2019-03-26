@@ -1,24 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
   <!-- Head tag -->
-  <%- partial('_partial/head') %>
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Title -->
+  
+  <title>网络 - 李想</title>
+
+  <!--Favicon-->
+  <link rel="icon" href="favicon/favicon.ico">
+
+  <!--Description-->
+  
+      <meta name="description" content="80 端口 IIS 占用问题
+闲来无事，学习nginx，可是下载下来启动nginx.exe发现，没有欢迎页面。
+显示出来的却是微软iis页面，而后进行问题排查。
+
+排查问题
+cmd 进入命令提示符界面，netstat -ano， -ano查看当前系统所有网络连接状况，并且显示地址和端口
+taskli">
+  
+
+  <!--Author-->
+  
+      <meta name="author" content="李想">
+  
+
+  <!-- Pure CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Open+Sans:300,800" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
 
   <body>
   	<div class="container-fluid navbar-container m-sm-5">
       <!-- Header -->
-      <%- partial('_partial/header') %>
+      <nav class="navbar navbar-toggleable-sm navbar-light px-1 py-3 my-3 mb-sm-5">
+  <a class="navbar-brand ml-2" href="/">李想</a>
+  <button class="navbar-toggler navbar-toggler-right py-2" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse text-center" id="navbarCollapse">
+    <ul class="navbar-nav ml-auto my-auto">
+      
+    </ul>
+    <hr class="hidden-md-up">
+  </div>
+</nav>
+
 
   		<div class="row">
-  			<%- body %>
+  			<div class="col-12 mb-4">
+  <img class="img-fluid project-img" src="/images/unsplash.jpg" alt="网络">
+</div>
+<div class="col-lg-4 col-12 pt-3 px-4 pr-lg-5">
+  <h1>网络</h1>
+</div>
+<div class="col-lg-8 col-12 pt-lg-3 mb-4 pl-lg-5 px-lg-0 px-4 portfolio-content">
+  <h1 id="80-端口-IIS-占用问题"><a href="#80-端口-IIS-占用问题" class="headerlink" title="80 端口 IIS 占用问题"></a>80 端口 IIS 占用问题</h1><blockquote>
+<p>闲来无事，学习nginx，可是下载下来启动nginx.exe发现，没有欢迎页面。</p>
+<p>显示出来的却是微软iis页面，而后进行问题排查。</p>
+</blockquote>
+<h2 id="排查问题"><a href="#排查问题" class="headerlink" title="排查问题"></a>排查问题</h2><ul>
+<li>cmd 进入命令提示符界面，netstat -ano， -ano查看当前系统所有网络连接状况，并且显示地址和端口</li>
+<li>tasklist 则是命令查看当前进程。</li>
+<li>若是80端口的pid为4，名为System的进程占用，则查看是否是IIS占用了80端口</li>
+</ul>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ul>
+<li>卸载IIS，步骤如下<ul>
+<li>我的电脑 –&gt; 添加或删除组件 –&gt; 添加或删除[Windows]组件 –&gt; IIS信息服务<br>去掉 IIS前面的勾然后“下一步”就可以了。</li>
+</ul>
+</li>
+<li>改iis的端口<ul>
+<li>我的电脑 –&gt; 右击-管理 –&gt; iis管理 –&gt; Default Web Site右击 –&gt; 编辑绑定</li>
+</ul>
+</li>
+<li>停止iis服务<ul>
+<li>在管理员命令行运行iisreset/stop</li>
+<li>CMD –&gt; services.msc –&gt; 服务里关闭World Wide Web Publishing Service</li>
+</ul>
+</li>
+<li>netstat -aon|findstr 80 而后 tskill 端口 杀死进程。 </li>
+</ul>
+
+</div>
+
+
       </div>
-      <% if (page.total > 1) { %>
-    <nav class="page-nav">
-        <%- paginator({prev_text: '<', next_text: '>'}) %>
-    </nav>
-<% } %>
+      
   	</div>
 
     <!-- After footer scripts -->
-    <%- partial('_partial/footer') %>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
   </body>
 </html>

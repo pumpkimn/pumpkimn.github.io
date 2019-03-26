@@ -1,24 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
   <!-- Head tag -->
-  <%- partial('_partial/head') %>
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Title -->
+  
+  <title>Java - 李想</title>
+
+  <!--Favicon-->
+  <link rel="icon" href="favicon/favicon.ico">
+
+  <!--Description-->
+  
+      <meta name="description" content="Java  8  streamjava 8 新特性有很多. 工作实际运用较多的几点.
+1.1、 Lambda表达式Lambda可以将函数作为一个方法的参数 (传递进方法中…)
+
+语法格式:
+​    (parameter) -&amp;gt; expression 或者 (parameter) -&amp;gt; ">
+  
+
+  <!--Author-->
+  
+      <meta name="author" content="李想">
+  
+
+  <!-- Pure CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Open+Sans:300,800" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
 
   <body>
   	<div class="container-fluid navbar-container m-sm-5">
       <!-- Header -->
-      <%- partial('_partial/header') %>
+      <nav class="navbar navbar-toggleable-sm navbar-light px-1 py-3 my-3 mb-sm-5">
+  <a class="navbar-brand ml-2" href="/">李想</a>
+  <button class="navbar-toggler navbar-toggler-right py-2" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse text-center" id="navbarCollapse">
+    <ul class="navbar-nav ml-auto my-auto">
+      
+    </ul>
+    <hr class="hidden-md-up">
+  </div>
+</nav>
+
 
   		<div class="row">
-  			<%- body %>
+  			<div class="col-12 mb-4">
+  <img class="img-fluid project-img" src="/images/unsplash.jpg" alt="Java">
+</div>
+<div class="col-lg-4 col-12 pt-3 px-4 pr-lg-5">
+  <h1>Java</h1>
+</div>
+<div class="col-lg-8 col-12 pt-lg-3 mb-4 pl-lg-5 px-lg-0 px-4 portfolio-content">
+  <h1 id="Java-8-stream"><a href="#Java-8-stream" class="headerlink" title="Java  8  stream"></a><font color="Green">Java  8  stream</font></h1><p>java 8 新特性有很多. 工作实际运用较多的几点.</p>
+<h2 id="1-1、-Lambda表达式"><a href="#1-1、-Lambda表达式" class="headerlink" title="1.1、 Lambda表达式"></a>1.1、 <font color="Green">Lambda表达式</font></h2><p>Lambda可以将函数作为一个方法的参数 (传递进方法中…)</p>
+<blockquote>
+<p>语法格式:</p>
+<p>​    (parameter) -&gt; expression 或者 (parameter) -&gt; {statements;}</p>
+<p><b>PS :</b></p>
+<p>​    1)     如参数只有一个 可以不加圆括号;</p>
+<p>​    2)    不需要声明参数类型;</p>
+<p>​    3)    如果只有一条语法 可以不加花括号;</p>
+<p>​    4)    如果只有一条语句 编译器会自动将值返回;如果是多条的话 需手动 return;</p>
+</blockquote>
+<h2 id="1-2、-方法引用"><a href="#1-2、-方法引用" class="headerlink" title="1.2、  方法引用 "></a>1.2、 <font color="Green"> 方法引用 </font></h2><p>方法引用为通过方法的名字来进行使用 或者 指向一个方法</p>
+<blockquote>
+<p>语法格式:</p>
+<p>​    方法引用使用一对冒号  : :</p>
+<p>​    构造方法引用:     类::new</p>
+<p>​    静态方法引用:    类::静态方法</p>
+<p>​    实例方法引用:    类::实例方法  或者 对象::实例方法</p>
+</blockquote>
+<h2 id="1-3、-Stream-API"><a href="#1-3、-Stream-API" class="headerlink" title="1.3、  Stream API "></a>1.3、 <font color="Green"> Stream API </font></h2><blockquote>
+<p> Lambda表达式为 stream api 的基础. 可以多学学<a href="http://www.runoob.com/java/java8-lambda-expressions.html" target="_blank" rel="noopener">Lambda表达式</a> </p>
+</blockquote>
+<blockquote>
+<p>简单来说就是用流将元素一个一个进行处理 隐式进行</p>
+<p>Stream API可以极大提高Java程序员的生产力，让程序员写出高效率、干净、简洁的代码。</p>
+<p>这种风格将要处理的元素集合看作一种流， 流在管道中传输， 并且可以在管道的节点上进行处理， 比如筛选， 排序，聚合等。</p>
+<p>元素流在管道中经过中间操作（intermediate operation）的处理，最后由最终操作(terminal operation)得到前面处理的结果。</p>
+</blockquote>
+<p><b>Before</b></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">	<span class="comment">//对象集合</span></span><br><span class="line">   <span class="keyword">private</span> List&lt;Person&gt; personList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">   <span class="comment">//数字集合</span></span><br><span class="line">   <span class="keyword">private</span> List&lt;Integer&gt; intList;</span><br><span class="line">   <span class="comment">//字符串集合</span></span><br><span class="line">   <span class="keyword">private</span> List&lt;String&gt; strList;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@Before</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">       personList.add(<span class="keyword">new</span> Person(<span class="number">18</span>, <span class="string">"wu qi"</span>, <span class="string">"男"</span>, <span class="number">18</span>));</span><br><span class="line">       personList.add(<span class="keyword">new</span> Person(<span class="number">20</span>, <span class="string">"zhang san"</span>, <span class="string">"男"</span>, <span class="number">19</span>));</span><br><span class="line">       personList.add(<span class="keyword">new</span> Person(<span class="number">23</span>, <span class="string">"wang si"</span>, <span class="string">"女"</span>, <span class="number">20</span>));</span><br><span class="line">       personList.add(<span class="keyword">new</span> Person(<span class="number">60</span>, <span class="string">"zhao wu"</span>, <span class="string">"男 "</span>, <span class="number">20</span>));</span><br><span class="line">       personList.add(<span class="keyword">new</span> Person(<span class="number">88</span>, <span class="string">"chen liu"</span>, <span class="string">"男"</span>, <span class="number">21</span>));</span><br><span class="line"></span><br><span class="line">       intList = Arrays.asList(<span class="keyword">new</span> Integer[]&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">2</span>, <span class="number">3</span>&#125;);</span><br><span class="line"></span><br><span class="line">       strList = Arrays.asList(<span class="keyword">new</span> String[]&#123;<span class="string">"A"</span>, <span class="string">"S"</span>, <span class="string">"D"</span>, <span class="string">"F"</span>, <span class="string">"X"</span>, <span class="string">"C"</span>, <span class="string">"Y"</span>, <span class="string">"H"</span>, <span class="string">""</span>, <span class="keyword">null</span>&#125;);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1-forEach-迭代-for-循环"><a href="#1-forEach-迭代-for-循环" class="headerlink" title="1.   forEach 迭代( for 循环)"></a>1. <font color="Green">  forEach</font> 迭代( for 循环)</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">    * foreach 循环</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="meta">@Test</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">foreach</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       <span class="comment">//方法引用</span></span><br><span class="line">       personList.stream().forEach(System.out::println);</span><br><span class="line">       System.out.println(<span class="string">"================================="</span>);</span><br><span class="line">       <span class="comment">//lambda表达</span></span><br><span class="line">       personList.stream().forEach(x -&gt; System.out.println(x));</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-filter-过滤条件-筛选条件"><a href="#2-filter-过滤条件-筛选条件" class="headerlink" title="2.  filter 过滤条件 (筛选条件)"></a>2. <font color="Green"> filter</font> 过滤条件 (筛选条件)</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">    * filter 过滤条件</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="meta">@Test</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testFilter</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       personList.stream()</span><br><span class="line">               .filter(x -&gt; StrUtil.equals(<span class="string">"男"</span>, x.getSex()))</span><br><span class="line">               .collect(Collectors.toList())</span><br><span class="line">               .forEach(System.out::println);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-limit-分页"><a href="#3-limit-分页" class="headerlink" title="3. limit 分页"></a>3. limit 分页</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">   * limit 分页</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="meta">@Test</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">limit</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    personList.stream().limit(<span class="number">3</span>).collect(Collectors.toList()).forEach(System.out::println);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-sorted-排序"><a href="#4-sorted-排序" class="headerlink" title="4.  sorted 排序"></a>4. <font color="Green"> sorted</font> 排序</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">     * sorted 排序 数组</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sorted</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//数组正序</span></span><br><span class="line">        intList.stream().sorted().collect(Collectors.toList()).forEach(System.out::println);</span><br><span class="line">        <span class="comment">//数组到序</span></span><br><span class="line">        intList.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList()).forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//字符串 自然顺序排序</span></span><br><span class="line">        strList.stream().sorted(Comparator.nullsLast(Comparator.naturalOrder())).collect(Collectors.toList()).forEach(System.out::println);</span><br><span class="line">        <span class="comment">//字符串 倒序</span></span><br><span class="line">        strList.stream().sorted(Comparator.nullsLast(Comparator.reverseOrder())).collect(Collectors.toList()).forEach(System.out::println);</span><br><span class="line">        <span class="comment">// 集合对象排序</span></span><br><span class="line">        <span class="comment">//正序</span></span><br><span class="line">        personList.stream().sorted(Comparator.comparing(Person::getId)).collect(Collectors.toList()).forEach(System.out::println);</span><br><span class="line">        <span class="comment">//倒序</span></span><br><span class="line">        personList.stream().sorted(Comparator.comparing(Person::getId).reversed()).collect(Collectors.toList()).forEach(System.out::println);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="5-Map-K-V形式"><a href="#5-Map-K-V形式" class="headerlink" title="5.  Map  K,V形式"></a>5. <font color="Green"> Map</font>  K,V形式</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">    * map</span></span><br><span class="line"><span class="comment">    * k，v 形式</span></span><br><span class="line"><span class="comment">    * 对每个元素进行处理，</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="meta">@Test</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">map</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       intList.stream().map(e -&gt; e).collect(Collectors.toList()).forEach(System.out::println);</span><br><span class="line">       strList.stream().map(e -&gt; e + <span class="number">2</span>).collect(Collectors.toList()).forEach(System.out::println);</span><br><span class="line">       personList.stream().map(x -&gt; x).collect(Collectors.toList()).forEach(System.out::println);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="6-toMap-各元素转Map"><a href="#6-toMap-各元素转Map" class="headerlink" title="6.  toMap  各元素转Map"></a>6. <font color="Green"> toMap</font>  各元素转Map</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 转成Map&lt;K,V&gt;</span></span><br><span class="line"><span class="comment">    * 在这特别注意 k不能重复，如重复则报错，可以指定重复怎么整理</span></span><br><span class="line"><span class="comment">    * 例如 Map&lt;String,Person&gt; personIdToPerson = person.stream().collect(toMap(Person::getId, Functions.identity()));</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="meta">@Test</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">toMap</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       <span class="comment">//将list 转换 map 选取 list 各个对象id 为 map的K. 注意选取对象作为K时 必须得唯一 不然就有问题了.</span></span><br><span class="line">       <span class="comment">//Map&lt;Integer, Person&gt; map = personList.stream().collect(Collectors.toMap(Person::getId, Function.identity()));</span></span><br><span class="line">       <span class="comment">//System.out.println(collect.get(20));</span></span><br><span class="line">       <span class="comment">//Map&lt;Integer, Person&gt; map2 = personList.stream().collect(Collectors.toMap(Person::getId, Function.identity(), (c1, c2) -&gt; c2));</span></span><br><span class="line">       <span class="comment">//System.out.println(map2);</span></span><br><span class="line">       Map&lt;Integer, Person&gt; map3 = personList.stream().collect(Collectors.toMap(Person::getId, Function.identity(), (c1, c2) -&gt; &#123;</span><br><span class="line">           <span class="keyword">if</span> (c1.getId() &gt; c2.getId()) &#123;</span><br><span class="line">               <span class="keyword">return</span> c2;</span><br><span class="line">           &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">               <span class="keyword">return</span> c1;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;));</span><br><span class="line">       System.out.println(map3);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">	<span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">java81</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//map -&gt; stream -&gt; filter -&gt; map</span></span><br><span class="line">        HashMap&lt;Integer, String&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        map.put(<span class="number">1</span>, <span class="string">"lixiang.com"</span>);</span><br><span class="line">        map.put(<span class="number">2</span>, <span class="string">"swgger.xyz"</span>);</span><br><span class="line">        map.entrySet().stream()</span><br><span class="line">                .filter(x -&gt; x.getKey() == <span class="number">2</span>)</span><br><span class="line"><span class="comment">//                .collect(Collectors.toMap(x -&gt; x.getKey(), x -&gt; x.getValue())); or like this</span></span><br><span class="line"><span class="comment">//                .collect(Collectors.toMap(Map.Entry::getKey,Map.Entry::getValue));</span></span><br><span class="line">                .collect(Collectors.toList()).forEach(System.out::println);</span><br><span class="line">        <span class="comment">//System.out.println(collect);</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="7-groupBy-分组"><a href="#7-groupBy-分组" class="headerlink" title="7.  groupBy  分组"></a>7. <font color="Green"> groupBy</font>  分组</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 分组 groupby</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">groupBy</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="comment">//        Map&lt;Integer, List&lt;Person&gt;&gt; map = personList.stream().collect(Collectors.groupingBy(Person::getId));</span></span><br><span class="line"><span class="comment">//        System.out.println(map);</span></span><br><span class="line"><span class="comment">//        Map&lt;Integer, Long&gt; map1 = personList.stream().collect(Collectors.groupingBy(Person::getId, Collectors.counting()));</span></span><br><span class="line"><span class="comment">//        System.out.println(map1);</span></span><br><span class="line">        Map&lt;Integer, Set&lt;String&gt;&gt; map2 = personList.stream().collect(Collectors.groupingBy(Person::getId, Collectors.mapping(Person::getName, Collectors.toSet())));</span><br><span class="line">        System.out.println(map2);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="8-Sum-统计"><a href="#8-Sum-统计" class="headerlink" title="8.  Sum  统计"></a>8. <font color="Green"> Sum</font>  统计</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Sum</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       <span class="comment">//流读取 拿到 统计汇总对象</span></span><br><span class="line">       IntSummaryStatistics intSummaryStatistics = intList.stream().mapToInt(x -&gt; x).summaryStatistics();</span><br><span class="line">       <span class="comment">//最大值</span></span><br><span class="line">       System.out.println(intSummaryStatistics.getMax());</span><br><span class="line">       <span class="comment">//最小值</span></span><br><span class="line">       System.out.println(intSummaryStatistics.getMin());</span><br><span class="line">       <span class="comment">//平均值</span></span><br><span class="line">       System.out.println(intSummaryStatistics.getAverage());</span><br><span class="line">       <span class="comment">//统计数</span></span><br><span class="line">       System.out.println(intSummaryStatistics.getCount());</span><br><span class="line">       <span class="comment">//总额</span></span><br><span class="line">       System.out.println(intSummaryStatistics.getSum());</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<p><a href="https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/" target="_blank" rel="noopener">流 Stream API 详解</a></p>
+<h2 id="1-4、-函数式接口-待定"><a href="#1-4、-函数式接口-待定" class="headerlink" title="1.4、  函数式接口  待定"></a>1.4、 <font color="Green"> 函数式接口  </font>待定</h2><p>接口中可以定义默认方法和静态方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</div>
+
+
       </div>
-      <% if (page.total > 1) { %>
-    <nav class="page-nav">
-        <%- paginator({prev_text: '<', next_text: '>'}) %>
-    </nav>
-<% } %>
+      
   	</div>
 
     <!-- After footer scripts -->
-    <%- partial('_partial/footer') %>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
   </body>
 </html>
