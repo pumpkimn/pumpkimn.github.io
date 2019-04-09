@@ -141,6 +141,173 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2019-04-09-TCP-IP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/09/2019-04-09-TCP-IP/">TCP/IP整理</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/09/2019-04-09-TCP-IP/" class="archive-article-date">
+  	<time datetime="2019-04-08T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p># </p>
+<h2 id="分层"><a href="#分层" class="headerlink" title="分层"></a>分层</h2><p><img src="C:\Users\Shinelon\AppData\Roaming\Typora\typora-user-images\1554704819504.png" alt="1554704819504">在这本经典书籍里面这本书<strong>TCP/IP详解 卷一</strong>中，网络协议通常分不同层次进行开发，每一层分别负责不同的通信功能。一个协议族，比如 T C P / I P，是<br>一组不同层次上的多个协议的组合。 T C P / I P通常被认<br>为是一个四层协议系统，每一层负责不同的功能。</p>
+<h3 id="链路层"><a href="#链路层" class="headerlink" title="链路层"></a>链路层</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">有时也称作数据链路层或者网络接口层，通常包括操作系统中的设备驱动程序和计算机中对应的网络接口层。主要负责处理网络传输的物理接口（电缆）。</span><br></pre></td></tr></table></figure>
+<h3 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">也可以叫做互联网层，负责处理分组在网络中分组的活动，例如分组的选路(物流分发中心，根据某个地址分发到某区域)。网络协议层有IP协议（网际协议），ICMP协议（Internet互联网控制报文协议）以及IGMP协议（Internet组管理协议）。</span><br></pre></td></tr></table></figure>
+<h3 id="运输层"><a href="#运输层" class="headerlink" title="运输层"></a>运输层</h3><p>主要为两台主机上的应用程序提供端到端的通信。这一层有两个互不相干的的传输协议：TCP协议（传输控制协议 可靠）和UDP协议（用户数据报文协议 不可靠）</p>
+<p>TCP协议主要为两端提供可靠性的数据通信。它所作的工作将应用层的数据分块打包给网络层分组以及设置发送超时时间的确认分组。</p>
+<p>UDP协议则是为应用层进行数据包的分组，从一端发送到另一端。但是并不保证该数据包能到达另一端。</p>
+<h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">应用层负责处理特定的应用程序细节。有许多基于运输层TPC/IP协议孵化的应用层协议。例如:HTTP协议（超文本传输协议）FTP协议（文件传输协议）等等。</span><br></pre></td></tr></table></figure>
+<p><img src="C:\Users\Shinelon\AppData\Roaming\Typora\typora-user-images\1554693990562.png" alt="1554693990562"></p>
+<p><center><strong>TCP/UP协议中不同层次的协议</strong><center></center></center></p>
+<h1 id="抓包过程"><a href="#抓包过程" class="headerlink" title="抓包过程"></a>抓包过程</h1><h2 id="参数概览"><a href="#参数概览" class="headerlink" title="参数概览"></a>参数概览</h2><table>
+<thead>
+<tr>
+<th>参数详解</th>
+<th>具体作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time</td>
+<td>请求时间</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>源地址</td>
+</tr>
+<tr>
+<td>Destination</td>
+<td>目标地址</td>
+</tr>
+<tr>
+<td>Protocol</td>
+<td>协议</td>
+</tr>
+<tr>
+<td>Length</td>
+<td>字节长度</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>封包参数</th>
+<th>具体作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Info</td>
+<td>详细信息</td>
+</tr>
+<tr>
+<td>Frame</td>
+<td>物理层的数据帧概况</td>
+</tr>
+<tr>
+<td>Ethernet II</td>
+<td>数据链路层以太网帧头部信息</td>
+</tr>
+<tr>
+<td>Internet Protocol Version 4</td>
+<td>互联网层IP包头部信息</td>
+</tr>
+<tr>
+<td>Transmission Control Protocol</td>
+<td>传输层T的数据段头部信息，此处是TCP</td>
+</tr>
+<tr>
+<td>Hypertext Transfer Protocol</td>
+<td>应用层的信息，此处是HTTP协议</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="C:\Users\Shinelon\AppData\Roaming\Typora\typora-user-images\1554706044009.png" alt="1554706044009"></p>
+<h2 id="抓包"><a href="#抓包" class="headerlink" title="抓包"></a>抓包</h2><p>未完待续…</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/网络/" class="article-tag-list-link color3">网络</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/09/2019-04-09-TCP-IP/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2019-04-03-OOP " class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -394,6 +561,191 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/02/22/2019-02-22-port/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2018-12-06-toos" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/08/2018-12-06-toos/">Tool</a>
+    </h1>
+  
+
+        
+        <a href="/2018/11/08/2018-12-06-toos/" class="archive-article-date">
+  	<time datetime="2018-11-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="IntelliJ-IDEA"><a href="#IntelliJ-IDEA" class="headerlink" title="IntelliJ-IDEA"></a>IntelliJ-IDEA</h1><blockquote>
+<p>官网 <a href="https://www.jetbrains.com/idea/" target="_blank" rel="noopener">download</a></p>
+<ul>
+<li>idea64.exe.vmoptions </li>
+<li>-javaagent:D:/Program Files/JetBrains/IntelliJ IDEA 2018.2.5/JetbrainsCrack.jar</li>
+<li>网络上搜索破解码</li>
+<li>其他 jetbrains 软件 步骤差不多</li>
+</ul>
+</blockquote>
+<h1 id="Github-Desktop"><a href="#Github-Desktop" class="headerlink" title="Github Desktop"></a>Github Desktop</h1><blockquote>
+<p>官网 <a href="https://desktop.github.com/" target="_blank" rel="noopener">download</a></p>
+</blockquote>
+<ul>
+<li>自定义盘符 无脑next</li>
+</ul>
+<h1 id="TortoiseSVN"><a href="#TortoiseSVN" class="headerlink" title="TortoiseSVN"></a>TortoiseSVN</h1><blockquote>
+<p>官网 <a href="https://tortoisesvn.net/downloads.html" target="_blank" rel="noopener">download</a></p>
+</blockquote>
+<ul>
+<li>自定义盘符 无脑next</li>
+</ul>
+<h1 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h1><blockquote>
+<p>官网 <a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener">download</a></p>
+</blockquote>
+<ul>
+<li><p>自定义盘符 无脑next</p>
+</li>
+<li><p>配置环境变量 path : D:\Program Files\Mysql\bin;</p>
+</li>
+<li><p>CMD窗口登陆 mysql -hlocalhost -uroot -proot</p>
+</li>
+<li><p>第一次登陆 mysql -uroot -p</p>
+</li>
+<li><p>查询用户密码 select host,user,authentication_string from mysql.user;</p>
+</li>
+<li><p>设置 或者 修改密码 update mysql.user set authentication_string=password(“root”) where user</p>
+<p>=”root”;</p>
+</li>
+<li><p>具体记不清 到时候百度一下你就知道</p>
+</li>
+</ul>
+<h1 id="Java-Development-Kit"><a href="#Java-Development-Kit" class="headerlink" title="Java Development Kit"></a>Java Development Kit</h1><blockquote>
+<p>官网 <a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">download</a></p>
+</blockquote>
+<ul>
+<li>自定义盘符 无脑next</li>
+<li>设置环境变量</li>
+<li>JAVA_HOME    D:\Program Files\Java32\jdk1.8.0_191</li>
+<li>Path D:\Program Files\Java\jdk1.8.0_191\bin; 或者 %JAVA_HOME%；</li>
+<li>cmd java -version</li>
+</ul>
+<h1 id="Notepad"><a href="#Notepad" class="headerlink" title="Notepad++"></a>Notepad++</h1><blockquote>
+<p>官网 <a href="https://notepad-plus-plus.org/" target="_blank" rel="noopener">download</a></p>
+</blockquote>
+<ul>
+<li>自定义盘符 无脑next</li>
+</ul>
+<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><blockquote>
+<p>官网 <a href="https://git-scm.com/" target="_blank" rel="noopener">download</a></p>
+</blockquote>
+<ul>
+<li>自定义盘符 无脑next</li>
+</ul>
+<h1 id="腾讯桌面整理"><a href="#腾讯桌面整理" class="headerlink" title="腾讯桌面整理"></a>腾讯桌面整理</h1><blockquote>
+<p>官网 <a href="https://pc.qq.com/detail/5/detail_23125.html" target="_blank" rel="noopener">download</a></p>
+</blockquote>
+<ul>
+<li>自定义盘符 无脑next</li>
+</ul>
+<h1 id="RedisDesktopManager"><a href="#RedisDesktopManager" class="headerlink" title="RedisDesktopManager"></a>RedisDesktopManager</h1><blockquote>
+<p> 官网 <a href="https://redisdesktop.com/download" target="_blank" rel="noopener">download</a></p>
+<p> 汉化 <a href="https://www.newasp.net/soft/391754.html" target="_blank" rel="noopener">download</a> </p>
+</blockquote>
+<ul>
+<li>自定义盘符 无脑next</li>
+</ul>
+<h1 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h1><blockquote>
+<p>官网 <a href="https://www.typora.io/" target="_blank" rel="noopener">download</a></p>
+</blockquote>
+<ul>
+<li>自定义盘符 无脑next</li>
+</ul>
+<h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><blockquote>
+<p>官网 <a href="https://www.python.org/" target="_blank" rel="noopener">download</a></p>
+</blockquote>
+<ul>
+<li>自定义盘符 无脑next</li>
+<li>设置 环境变量 </li>
+</ul>
+<h1 id="网络代理-Proxifier"><a href="#网络代理-Proxifier" class="headerlink" title="网络代理 Proxifier"></a>网络代理 Proxifier</h1><blockquote>
+<p>汉化网站 <a href="http://www.hanzify.org/software/13717.html" target="_blank" rel="noopener">download</a></p>
+</blockquote>
+<ul>
+<li>自定义盘符 无脑next</li>
+</ul>
+<h1 id="PowerDesigner"><a href="#PowerDesigner" class="headerlink" title="PowerDesigner"></a>PowerDesigner</h1><blockquote>
+<p>包内已有解压包</p>
+</blockquote>
+<ul>
+<li>如需做UML生成sql或导出结构图 需安装32位版本java jdk  PD只支持32位</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/tool/" class="article-tag-list-link color5">tool</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/11/08/2018-12-06-toos/">展开全文 >></a>
         </p>
       
 
@@ -844,19 +1196,19 @@
 
 
   
-    <article id="post-2018-12-06-toos" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-2019-01-17-shadowsocksR" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/08/2018-12-06-toos/">Tool</a>
+      <a class="article-title" href="/2018/11/08/2019-01-17-shadowsocksR/">Shadowsocks R</a>
     </h1>
   
 
         
-        <a href="/2018/11/08/2018-12-06-toos/" class="archive-article-date">
+        <a href="/2018/11/08/2019-01-17-shadowsocksR/" class="archive-article-date">
   	<time datetime="2018-11-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-08</time>
 </a>
         
@@ -864,107 +1216,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="IntelliJ-IDEA"><a href="#IntelliJ-IDEA" class="headerlink" title="IntelliJ-IDEA"></a>IntelliJ-IDEA</h1><blockquote>
-<p>官网 <a href="https://www.jetbrains.com/idea/" target="_blank" rel="noopener">download</a></p>
-<ul>
-<li>idea64.exe.vmoptions </li>
-<li>-javaagent:D:/Program Files/JetBrains/IntelliJ IDEA 2018.2.5/JetbrainsCrack.jar</li>
-<li>网络上搜索破解码</li>
-<li>其他 jetbrains 软件 步骤差不多</li>
-</ul>
-</blockquote>
-<h1 id="Github-Desktop"><a href="#Github-Desktop" class="headerlink" title="Github Desktop"></a>Github Desktop</h1><blockquote>
-<p>官网 <a href="https://desktop.github.com/" target="_blank" rel="noopener">download</a></p>
-</blockquote>
-<ul>
-<li>自定义盘符 无脑next</li>
-</ul>
-<h1 id="TortoiseSVN"><a href="#TortoiseSVN" class="headerlink" title="TortoiseSVN"></a>TortoiseSVN</h1><blockquote>
-<p>官网 <a href="https://tortoisesvn.net/downloads.html" target="_blank" rel="noopener">download</a></p>
-</blockquote>
-<ul>
-<li>自定义盘符 无脑next</li>
-</ul>
-<h1 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h1><blockquote>
-<p>官网 <a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener">download</a></p>
-</blockquote>
-<ul>
-<li><p>自定义盘符 无脑next</p>
-</li>
-<li><p>配置环境变量 path : D:\Program Files\Mysql\bin;</p>
-</li>
-<li><p>CMD窗口登陆 mysql -hlocalhost -uroot -proot</p>
-</li>
-<li><p>第一次登陆 mysql -uroot -p</p>
-</li>
-<li><p>查询用户密码 select host,user,authentication_string from mysql.user;</p>
-</li>
-<li><p>设置 或者 修改密码 update mysql.user set authentication_string=password(“root”) where user</p>
-<p>=”root”;</p>
-</li>
-<li><p>具体记不清 到时候百度一下你就知道</p>
-</li>
-</ul>
-<h1 id="Java-Development-Kit"><a href="#Java-Development-Kit" class="headerlink" title="Java Development Kit"></a>Java Development Kit</h1><blockquote>
-<p>官网 <a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">download</a></p>
-</blockquote>
-<ul>
-<li>自定义盘符 无脑next</li>
-<li>设置环境变量</li>
-<li>JAVA_HOME    D:\Program Files\Java32\jdk1.8.0_191</li>
-<li>Path D:\Program Files\Java\jdk1.8.0_191\bin; 或者 %JAVA_HOME%；</li>
-<li>cmd java -version</li>
-</ul>
-<h1 id="Notepad"><a href="#Notepad" class="headerlink" title="Notepad++"></a>Notepad++</h1><blockquote>
-<p>官网 <a href="https://notepad-plus-plus.org/" target="_blank" rel="noopener">download</a></p>
-</blockquote>
-<ul>
-<li>自定义盘符 无脑next</li>
-</ul>
-<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><blockquote>
-<p>官网 <a href="https://git-scm.com/" target="_blank" rel="noopener">download</a></p>
-</blockquote>
-<ul>
-<li>自定义盘符 无脑next</li>
-</ul>
-<h1 id="腾讯桌面整理"><a href="#腾讯桌面整理" class="headerlink" title="腾讯桌面整理"></a>腾讯桌面整理</h1><blockquote>
-<p>官网 <a href="https://pc.qq.com/detail/5/detail_23125.html" target="_blank" rel="noopener">download</a></p>
-</blockquote>
-<ul>
-<li>自定义盘符 无脑next</li>
-</ul>
-<h1 id="RedisDesktopManager"><a href="#RedisDesktopManager" class="headerlink" title="RedisDesktopManager"></a>RedisDesktopManager</h1><blockquote>
-<p> 官网 <a href="https://redisdesktop.com/download" target="_blank" rel="noopener">download</a></p>
-<p> 汉化 <a href="https://www.newasp.net/soft/391754.html" target="_blank" rel="noopener">download</a> </p>
-</blockquote>
-<ul>
-<li>自定义盘符 无脑next</li>
-</ul>
-<h1 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h1><blockquote>
-<p>官网 <a href="https://www.typora.io/" target="_blank" rel="noopener">download</a></p>
-</blockquote>
-<ul>
-<li>自定义盘符 无脑next</li>
-</ul>
-<h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><blockquote>
-<p>官网 <a href="https://www.python.org/" target="_blank" rel="noopener">download</a></p>
-</blockquote>
-<ul>
-<li>自定义盘符 无脑next</li>
-<li>设置 环境变量 </li>
-</ul>
-<h1 id="网络代理-Proxifier"><a href="#网络代理-Proxifier" class="headerlink" title="网络代理 Proxifier"></a>网络代理 Proxifier</h1><blockquote>
-<p>汉化网站 <a href="http://www.hanzify.org/software/13717.html" target="_blank" rel="noopener">download</a></p>
-</blockquote>
-<ul>
-<li>自定义盘符 无脑next</li>
-</ul>
-<h1 id="PowerDesigner"><a href="#PowerDesigner" class="headerlink" title="PowerDesigner"></a>PowerDesigner</h1><blockquote>
-<p>包内已有解压包</p>
-</blockquote>
-<ul>
-<li>如需做UML生成sql或导出结构图 需安装32位版本java jdk  PD只支持32位</li>
-</ul>
+        <h1 id="ShadowsocksR"><a href="#ShadowsocksR" class="headerlink" title="ShadowsocksR"></a>ShadowsocksR</h1><p><a href="http://vc2tea.com/whats-shadowsocks/" target="_blank" rel="noopener">简介</a></p>
+<p><a href="https://www.zhihu.com/question/29428996/answer/44492283" target="_blank" rel="noopener">查询本机公网</a></p>
+<p><a href="https://peterpan980927.cn/2018/01/21/SSR%E5%8E%9F%E7%90%86%E5%92%8C%E6%90%AD%E5%BB%BA%E7%BF%BB%E5%A2%99%E6%9C%8D%E5%8A%A1%E5%99%A8/" target="_blank" rel="noopener">搭建</a></p>
+<p><a href="https://deeponion.org/community/threads/vpnss-ssr.901/" target="_blank" rel="noopener">vpn ss/ssr 区别</a></p>
+<p><a href="https://congcong0806.github.io/2018/04/20/SS/" target="_blank" rel="noopener">SS/SSR 简介及资源</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">获取命令</span><br><span class="line">yum -y install wget</span><br><span class="line"></span><br><span class="line">复制并部署脚本.</span><br><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh &amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh</span><br></pre></td></tr></table></figure>
+<p>BBR 加速配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate &quot;https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh&quot; &amp;&amp; CHMOD +x tcp.sh &amp;&amp; ./tcp.sh</span><br><span class="line"></span><br><span class="line">bash tcp.sh</span><br></pre></td></tr></table></figure></p>
+<p>魔改 bbr<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">安装</span><br><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/YankeeBBR/master/bbr.sh &amp;&amp; bash bbr.sh install</span><br><span class="line">启动</span><br><span class="line">bash bbr.sh start</span><br><span class="line">查看 bbr 状态 </span><br><span class="line">sysctl net.ipv4.tcp_available_congestion_control</span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -990,7 +1249,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/tool/" class="article-tag-list-link color5">tool</a>
+        			<a href="/categories/网络/" class="article-tag-list-link color3">网络</a>
         		</li>
       		
 		</ul>
@@ -999,7 +1258,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/08/2018-12-06-toos/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/11/08/2019-01-17-shadowsocksR/">展开全文 >></a>
         </p>
       
 
@@ -1125,98 +1384,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/11/08/2018-12-24-java8-stream/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2019-01-17-shadowsocksR" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/08/2019-01-17-shadowsocksR/">Shadowsocks R</a>
-    </h1>
-  
-
-        
-        <a href="/2018/11/08/2019-01-17-shadowsocksR/" class="archive-article-date">
-  	<time datetime="2018-11-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="ShadowsocksR"><a href="#ShadowsocksR" class="headerlink" title="ShadowsocksR"></a>ShadowsocksR</h1><p><a href="http://vc2tea.com/whats-shadowsocks/" target="_blank" rel="noopener">简介</a></p>
-<p><a href="https://www.zhihu.com/question/29428996/answer/44492283" target="_blank" rel="noopener">查询本机公网</a></p>
-<p><a href="https://peterpan980927.cn/2018/01/21/SSR%E5%8E%9F%E7%90%86%E5%92%8C%E6%90%AD%E5%BB%BA%E7%BF%BB%E5%A2%99%E6%9C%8D%E5%8A%A1%E5%99%A8/" target="_blank" rel="noopener">搭建</a></p>
-<p><a href="https://deeponion.org/community/threads/vpnss-ssr.901/" target="_blank" rel="noopener">vpn ss/ssr 区别</a></p>
-<p><a href="https://congcong0806.github.io/2018/04/20/SS/" target="_blank" rel="noopener">SS/SSR 简介及资源</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">获取命令</span><br><span class="line">yum -y install wget</span><br><span class="line"></span><br><span class="line">复制并部署脚本.</span><br><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh &amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh</span><br></pre></td></tr></table></figure>
-<p>BBR 加速配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate &quot;https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh&quot; &amp;&amp; CHMOD +x tcp.sh &amp;&amp; ./tcp.sh</span><br><span class="line"></span><br><span class="line">bash tcp.sh</span><br></pre></td></tr></table></figure></p>
-<p>魔改 bbr<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">安装</span><br><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/YankeeBBR/master/bbr.sh &amp;&amp; bash bbr.sh install</span><br><span class="line">启动</span><br><span class="line">bash bbr.sh start</span><br><span class="line">查看 bbr 状态 </span><br><span class="line">sysctl net.ipv4.tcp_available_congestion_control</span><br></pre></td></tr></table></figure></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/网络/" class="article-tag-list-link color3">网络</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/08/2019-01-17-shadowsocksR/">展开全文 >></a>
         </p>
       
 
@@ -1428,117 +1595,10 @@
 
 
   
-    <article id="post-2018-11-05-git-config" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/05/2018-11-05-git-config/">Git config</a>
-    </h1>
-  
-
-        
-        <a href="/2018/11/05/2018-11-05-git-config/" class="archive-article-date">
-  	<time datetime="2018-11-04T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Git-常用资源"><a href="#Git-常用资源" class="headerlink" title="Git 常用资源"></a>Git 常用资源</h1><h2 id="库管理"><a href="#库管理" class="headerlink" title="库管理"></a>库管理</h2><h3 id="克隆库"><a href="#克隆库" class="headerlink" title="克隆库"></a>克隆库</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https:<span class="comment">//github.com/用户名/资源.git</span></span><br><span class="line">git clone --depth=<span class="number">1</span> https:<span class="comment">//github.com/用户名/资源.git # 抓取最近的一次 commit</span></span><br></pre></td></tr></table></figure>
-<h1 id="历史管理"><a href="#历史管理" class="headerlink" title="历史管理"></a>历史管理</h1><h2 id="查看历史"><a href="#查看历史" class="headerlink" title="查看历史"></a>查看历史</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git log --pretty=oneline filename # 一行显示</span><br><span class="line">git show xxxx # 查看某次修改</span><br></pre></td></tr></table></figure>
-<h2 id="标签功能"><a href="#标签功能" class="headerlink" title="标签功能"></a>标签功能</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git tag # 显示所有标签</span><br><span class="line">git tag -1 'v1.4.2.*' # 显示1.4.2 开头标签</span><br><span class="line">git tag v1.3 # 简单打标签</span><br><span class="line">git tag -a v1.2 9fceb02 #后期加注标签</span><br><span class="line">git tag -a v1.4 -m'my version 1.4' # 增加标签并注释， -a 为 annotated 缩写</span><br><span class="line">git show v1.4 #看某一标签详情</span><br><span class="line">git push origin v1.5 # 分享某个标签</span><br><span class="line">git push origin --tags # 分享所有标签</span><br></pre></td></tr></table></figure>
-<h2 id="回滚操作"><a href="#回滚操作" class="headerlink" title="回滚操作"></a>回滚操作</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git reset 9fceb02 # 保留修改</span><br><span class="line">git reset 9fceb02 --hard # 删除之后的修改</span><br></pre></td></tr></table></figure>
-<h2 id="取消文件的修改"><a href="#取消文件的修改" class="headerlink" title="取消文件的修改"></a>取消文件的修改</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout -- a.java # 取消单个文件</span><br><span class="line">git checkout -- # 取消所有文件的修改</span><br></pre></td></tr></table></figure>
-<h2 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git rm a.java # 直接删除文件</span><br><span class="line">git rm --cached a.java #删除文件暂存状态、</span><br></pre></td></tr></table></figure>
-<h2 id="移动文件"><a href="#移动文件" class="headerlink" title="移动文件"></a>移动文件</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git mv a.java ./test/a.java</span><br></pre></td></tr></table></figure>
-<h2 id="查看文件修改"><a href="#查看文件修改" class="headerlink" title="查看文件修改"></a>查看文件修改</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git diff		# 查看未暂存的文件更新</span><br><span class="line">git diff --cached  # 查看已暂存文件的更新</span><br></pre></td></tr></table></figure>
-<h2 id="暂存和恢复当前staging"><a href="#暂存和恢复当前staging" class="headerlink" title="暂存和恢复当前staging"></a>暂存和恢复当前staging</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git stash # 暂存当前分支的修改</span><br><span class="line">git stash apply # 恢复最近一次的暂存</span><br><span class="line">git stash list # 查看暂存内容</span><br><span class="line">git stash apply stash@&#123;2&#125; # 指定恢复某次暂存内容</span><br><span class="line">git stash drop stash#&#123;0&#125; # 删除某次暂存内容</span><br></pre></td></tr></table></figure>
-<h2 id="修改commit-历史记录"><a href="#修改commit-历史记录" class="headerlink" title="修改commit 历史记录"></a>修改commit 历史记录</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rebase -i <span class="number">0580</span>ea8</span><br></pre></td></tr></table></figure>
-<h1 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h1><h2 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch develop # 只创建分支</span><br><span class="line">git checkout -b master develop # 创建并切换到 develop 分支</span><br></pre></td></tr></table></figure>
-<h2 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git chekout master # 切换到 master 分支</span><br><span class="line">git merge --no-ff develop # 把develop 合并到 master 分支，no-ff 选项的作用是保留原分支记录</span><br><span class="line">git rebase develop # rebase 电气概念分支到 develop</span><br><span class="line">git branch -d develop # 删除 develop 分支</span><br></pre></td></tr></table></figure>
-<h2 id="克隆远程分支"><a href="#克隆远程分支" class="headerlink" title="克隆远程分支"></a>克隆远程分支</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch -r # 显示所有分支，包含远程分支</span><br><span class="line">git chekout origin/java</span><br></pre></td></tr></table></figure>
-<h2 id="修复develop上的合并错误"><a href="#修复develop上的合并错误" class="headerlink" title="修复develop上的合并错误"></a>修复develop上的合并错误</h2><pre><code>1.将merge前的commit创建一个分支，保留merge后的代码
-2.将develop `reset --force` 到merge前，然后`push --force`
-3.将分支中rebase develop
-4.将分支push到服务器重新merge
-</code></pre><h2 id="强制更新到远程分支最新版本"><a href="#强制更新到远程分支最新版本" class="headerlink" title="强制更新到远程分支最新版本"></a>强制更新到远程分支最新版本</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git reset --har origin/master</span><br><span class="line">git submodule update --remote -f</span><br></pre></td></tr></table></figure>
-<h1 id="Submodule使用"><a href="#Submodule使用" class="headerlink" title="Submodule使用"></a>Submodule使用</h1><h2 id="克隆带submodule的库"><a href="#克隆带submodule的库" class="headerlink" title="克隆带submodule的库"></a>克隆带submodule的库</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone --recursive https:<span class="comment">//github.com/pumpkimb/MainProject</span></span><br></pre></td></tr></table></figure>
-<h2 id="clonde-主库后再去clone-submodule"><a href="#clonde-主库后再去clone-submodule" class="headerlink" title="clonde 主库后再去clone submodule"></a>clonde 主库后再去clone submodule</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https:<span class="comment">//githun.com/pumpkimn/MainProject</span></span><br><span class="line">git submodule init</span><br><span class="line">git submodule update</span><br></pre></td></tr></table></figure>
-<h1 id="Git-设置"><a href="#Git-设置" class="headerlink" title="Git 设置"></a>Git 设置</h1><h2 id="Git的全局设置在-gitconfig-中-单独设置在-project-git-config-下。"><a href="#Git的全局设置在-gitconfig-中-单独设置在-project-git-config-下。" class="headerlink" title="Git的全局设置在 /.gitconfig 中,单独设置在 project/.git/config 下。"></a>Git的全局设置在 <code>/.gitconfig</code> 中,单独设置在 <code>project/.git/config</code> 下。</h2><h2 id="忽略设置全局在-gitignore-global-中，单独设置在-project-gitignore-下。"><a href="#忽略设置全局在-gitignore-global-中，单独设置在-project-gitignore-下。" class="headerlink" title="忽略设置全局在 ~/.gitignore_global 中，单独设置在 project/.gitignore 下。"></a>忽略设置全局在 <code>~/.gitignore_global</code> 中，单独设置在 <code>project/.gitignore</code> 下。</h2><h2 id="设置-commit-的用户和邮箱"><a href="#设置-commit-的用户和邮箱" class="headerlink" title="设置 commit 的用户和邮箱"></a>设置 commit 的用户和邮箱</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name <span class="string">"xxx"</span></span><br><span class="line">git config user,email <span class="string">"xx@xx.com"</span></span><br></pre></td></tr></table></figure>
-<h2 id="或者直接修改-config-文件"><a href="#或者直接修改-config-文件" class="headerlink" title="或者直接修改 config 文件"></a>或者直接修改 config 文件</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[user]</span><br><span class="line">	name = xxx</span><br><span class="line">	email = xx<span class="meta">@xx</span>.com</span><br></pre></td></tr></table></figure>
-<h2 id="查看设置项"><a href="#查看设置项" class="headerlink" title="查看设置项"></a>查看设置项</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
-<h2 id="设置git终端颜色"><a href="#设置git终端颜色" class="headerlink" title="设置git终端颜色"></a>设置git终端颜色</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global color.diff auto</span><br><span class="line">git config --global color.status auto</span><br><span class="line">git config --global color.branch auto</span><br></pre></td></tr></table></figure>
-<ul>
-<li><a href="http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html" target="_blank" rel="noopener">常用git命令清单</a></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/config/" class="article-tag-list-link color2">config</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/05/2018-11-05-git-config/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
