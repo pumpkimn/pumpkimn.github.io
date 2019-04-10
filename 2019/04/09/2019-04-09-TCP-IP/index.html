@@ -8,21 +8,21 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>TCP/IP整理 | 李想</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="分层在这本经典书籍里面这本书TCP/IP详解 卷一中，网络协议通常分不同层次进行开发，每一层分别负责不同的通信功能。一个协议族，比如 T C P / I P，是一组不同层次上的多个协议的组合。 T C P / I P通常被认为是一个四层协议系统，每一层负责不同的功能。 链路层1有时也称作数据链路层或者网络接口层，通常包括操作系统中的设备驱动程序和计算机中对应的网络接口层。主要负责处理网络传输的物理">
+  <meta name="description" content="分层12345678910111213应用层：网络服务与最终用户的一个接口。表示层：数据的表示、安全、压缩。会话层：建立、管理、终止会话。传输层：定义传输数据的协议端口号，以及流控和差错校验。网络层：进行逻辑地址寻址，实现不同网络之间的路径选择。数据链路层：建立逻辑连接、进行硬件地址寻址、差错校验等功能。物理层：建立、维护、断开物理连接 在这本经典书籍里面这本书TCP/IP详解 卷一中，网络协议通">
 <meta name="keywords" content="随笔">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TCP&#x2F;IP整理">
 <meta property="og:url" content="http://yoursite.com/2019/04/09/2019-04-09-TCP-IP/index.html">
 <meta property="og:site_name" content="李想">
-<meta property="og:description" content="分层在这本经典书籍里面这本书TCP/IP详解 卷一中，网络协议通常分不同层次进行开发，每一层分别负责不同的通信功能。一个协议族，比如 T C P / I P，是一组不同层次上的多个协议的组合。 T C P / I P通常被认为是一个四层协议系统，每一层负责不同的功能。 链路层1有时也称作数据链路层或者网络接口层，通常包括操作系统中的设备驱动程序和计算机中对应的网络接口层。主要负责处理网络传输的物理">
+<meta property="og:description" content="分层12345678910111213应用层：网络服务与最终用户的一个接口。表示层：数据的表示、安全、压缩。会话层：建立、管理、终止会话。传输层：定义传输数据的协议端口号，以及流控和差错校验。网络层：进行逻辑地址寻址，实现不同网络之间的路径选择。数据链路层：建立逻辑连接、进行硬件地址寻址、差错校验等功能。物理层：建立、维护、断开物理连接 在这本经典书籍里面这本书TCP/IP详解 卷一中，网络协议通">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/img/1554704819504.png">
 <meta property="og:image" content="http://yoursite.com/img/1554693990562.png">
 <meta property="og:image" content="http://yoursite.com/img/1554706044009.png">
-<meta property="og:updated_time" content="2019-04-09T09:51:24.433Z">
+<meta property="og:updated_time" content="2019-04-10T02:40:10.893Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TCP&#x2F;IP整理">
-<meta name="twitter:description" content="分层在这本经典书籍里面这本书TCP/IP详解 卷一中，网络协议通常分不同层次进行开发，每一层分别负责不同的通信功能。一个协议族，比如 T C P / I P，是一组不同层次上的多个协议的组合。 T C P / I P通常被认为是一个四层协议系统，每一层负责不同的功能。 链路层1有时也称作数据链路层或者网络接口层，通常包括操作系统中的设备驱动程序和计算机中对应的网络接口层。主要负责处理网络传输的物理">
+<meta name="twitter:description" content="分层12345678910111213应用层：网络服务与最终用户的一个接口。表示层：数据的表示、安全、压缩。会话层：建立、管理、终止会话。传输层：定义传输数据的协议端口号，以及流控和差错校验。网络层：进行逻辑地址寻址，实现不同网络之间的路径选择。数据链路层：建立逻辑连接、进行硬件地址寻址、差错校验等功能。物理层：建立、维护、断开物理连接 在这本经典书籍里面这本书TCP/IP详解 卷一中，网络协议通">
 <meta name="twitter:image" content="http://yoursite.com/img/1554704819504.png">
   
   
@@ -165,15 +165,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="分层"><a href="#分层" class="headerlink" title="分层"></a>分层</h2><p><img src="/img/1554704819504.png" alt="1554704819504">在这本经典书籍里面这本书<strong>TCP/IP详解 卷一</strong>中，网络协议通常分不同层次进行开发，每一层分别负责不同的通信功能。一个协议族，比如 T C P / I P，是<br>一组不同层次上的多个协议的组合。 T C P / I P通常被认<br>为是一个四层协议系统，每一层负责不同的功能。</p>
+        <h2 id="分层"><a href="#分层" class="headerlink" title="分层"></a>分层</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">应用层：网络服务与最终用户的一个接口。</span><br><span class="line"></span><br><span class="line">表示层：数据的表示、安全、压缩。</span><br><span class="line"></span><br><span class="line">会话层：建立、管理、终止会话。</span><br><span class="line"></span><br><span class="line">传输层：定义传输数据的协议端口号，以及流控和差错校验。</span><br><span class="line"></span><br><span class="line">网络层：进行逻辑地址寻址，实现不同网络之间的路径选择。</span><br><span class="line"></span><br><span class="line">数据链路层：建立逻辑连接、进行硬件地址寻址、差错校验等功能。</span><br><span class="line"></span><br><span class="line">物理层：建立、维护、断开物理连接</span><br></pre></td></tr></table></figure>
+<p><img src="/img/1554704819504.png" alt="1554704819504">在这本经典书籍里面这本书<strong>TCP/IP详解 卷一</strong>中，网络协议通常分不同层次进行开发，每一层分别负责不同的通信功能。一个协议族，比如 T C P / I P，是<br>一组不同层次上的多个协议的组合。 T C P / I P通常被认<br>为是一个四层协议系统，每一层负责不同的功能。</p>
 <h3 id="链路层"><a href="#链路层" class="headerlink" title="链路层"></a>链路层</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">有时也称作数据链路层或者网络接口层，通常包括操作系统中的设备驱动程序和计算机中对应的网络接口层。主要负责处理网络传输的物理接口（电缆）。</span><br></pre></td></tr></table></figure>
 <h3 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">也可以叫做互联网层，负责处理分组在网络中分组的活动，例如分组的选路(物流分发中心，根据某个地址分发到某区域)。网络协议层有IP协议（网际协议），ICMP协议（Internet互联网控制报文协议）以及IGMP协议（Internet组管理协议）。</span><br></pre></td></tr></table></figure>
-<h3 id="运输层"><a href="#运输层" class="headerlink" title="运输层"></a>运输层</h3><p>主要为两台主机上的应用程序提供端到端的通信。这一层有两个互不相干的的传输协议：TCP协议（传输控制协议 可靠）和UDP协议（用户数据报文协议 不可靠）</p>
-<p>TCP协议主要为两端提供可靠性的数据通信。它所作的工作将应用层的数据分块打包给网络层分组以及设置发送超时时间的确认分组。</p>
-<p>UDP协议则是为应用层进行数据包的分组，从一端发送到另一端。但是并不保证该数据包能到达另一端。</p>
+<h3 id="运输层"><a href="#运输层" class="headerlink" title="运输层"></a>运输层</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">主要为两台主机上的应用程序提供端到端的通信。这一层有两个互不相干的的传输协议：TCP协议（传输控制协议 可靠）和UDP协议（用户数据报文协议 不可靠）</span><br><span class="line">TCP协议主要为两端提供可靠性的数据通信。它所作的工作将应用层的数据分块打包给网络层分组以及设置发送超时时间的确认分组。</span><br><span class="line">UDP协议则是为应用层进行数据包的分组，从一端发送到另一端。但是并不保证该数据包能到达另一端。</span><br></pre></td></tr></table></figure>
 <h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">应用层负责处理特定的应用程序细节。有许多基于运输层TPC/IP协议孵化的应用层协议。例如:HTTP协议（超文本传输协议）FTP协议（文件传输协议）等等。</span><br></pre></td></tr></table></figure>
 <p><img src="/img/1554693990562.png" alt="1554693990562"></p>
 <p><center><strong>TCP/UP协议中不同层次的协议</strong><center></center></center></p>
+<p>​    </p>
 <h1 id="抓包过程"><a href="#抓包过程" class="headerlink" title="抓包过程"></a>抓包过程</h1><h2 id="参数概览"><a href="#参数概览" class="headerlink" title="参数概览"></a>参数概览</h2><table>
 <thead>
 <tr>
@@ -246,7 +246,7 @@
 </tbody>
 </table>
 <p><img src="/img/1554706044009.png" alt="1554706044009"></p>
-<h2 id="抓包"><a href="#抓包" class="headerlink" title="抓包"></a>抓包</h2><p>未完待续…</p>
+<p>未完待续…</p>
 
       
 
