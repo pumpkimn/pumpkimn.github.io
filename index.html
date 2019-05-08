@@ -677,6 +677,92 @@
 
 
   
+    <article id="post-2018-12-27-maven" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/08/2018-12-27-maven/">Maven</a>
+    </h1>
+  
+
+        
+        <a href="/2018/11/08/2018-12-27-maven/" class="archive-article-date">
+  	<time datetime="2018-11-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h1><h2 id="管理jar包"><a href="#管理jar包" class="headerlink" title="管理jar包"></a>管理jar包</h2><p>因为maven 中央仓库在国外 所以设置阿里的中央仓库地址 在Maven下的setting.xml文件中mirror节点 添加下面子节点.<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;mirror&gt;</span><br><span class="line">    &lt;id&gt;nexus-aliyun&lt;/id&gt;</span><br><span class="line">    &lt;mirrorOf&gt;*&lt;/mirrorOf&gt;</span><br><span class="line">    &lt;name&gt;Nexus aliyun&lt;/name&gt;</span><br><span class="line">    &lt;url&gt;http:<span class="comment">//maven.aliyun.com/nexus/content/groups/public&lt;/url&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="生成war包"><a href="#生成war包" class="headerlink" title="生成war包"></a>生成war包</h2><p>idea 在控制台输出<font color="blue">mvn clean package</font> 或者直接在Maven Projects中选择<font color="blue">package</font> 就行了. 接着在target找到已生成的war包.</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/maven/" class="article-tag-list-link color1">maven</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/11/08/2018-12-27-maven/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2018-12-06-toos" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1375,92 +1461,6 @@
 
 
   
-    <article id="post-2018-12-27-maven" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/08/2018-12-27-maven/">Maven</a>
-    </h1>
-  
-
-        
-        <a href="/2018/11/08/2018-12-27-maven/" class="archive-article-date">
-  	<time datetime="2018-11-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h1><h2 id="管理jar包"><a href="#管理jar包" class="headerlink" title="管理jar包"></a>管理jar包</h2><p>因为maven 中央仓库在国外 所以设置阿里的中央仓库地址 在Maven下的setting.xml文件中mirror节点 添加下面子节点.<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;mirror&gt;</span><br><span class="line">    &lt;id&gt;nexus-aliyun&lt;/id&gt;</span><br><span class="line">    &lt;mirrorOf&gt;*&lt;/mirrorOf&gt;</span><br><span class="line">    &lt;name&gt;Nexus aliyun&lt;/name&gt;</span><br><span class="line">    &lt;url&gt;http:<span class="comment">//maven.aliyun.com/nexus/content/groups/public&lt;/url&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure></p>
-<h2 id="生成war包"><a href="#生成war包" class="headerlink" title="生成war包"></a>生成war包</h2><p>idea 在控制台输出<font color="blue">mvn clean package</font> 或者直接在Maven Projects中选择<font color="blue">package</font> 就行了. 接着在target找到已生成的war包.</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/maven/" class="article-tag-list-link color1">maven</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/08/2018-12-27-maven/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-2018-12-24-java8-stream" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1513,6 +1513,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">	<span class="comment">//对象集合</span></span><br><span class="line">   <span class="keyword">private</span> List&lt;Person&gt; personList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">   <span class="comment">//数字集合</span></span><br><span class="line">   <span class="keyword">private</span> List&lt;Integer&gt; intList;</span><br><span class="line">   <span class="comment">//字符串集合</span></span><br><span class="line">   <span class="keyword">private</span> List&lt;String&gt; strList;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@Before</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">       personList.add(<span class="keyword">new</span> Person(<span class="number">18</span>, <span class="string">"wu qi"</span>, <span class="string">"男"</span>, <span class="number">18</span>));</span><br><span class="line">       personList.add(<span class="keyword">new</span> Person(<span class="number">20</span>, <span class="string">"zhang san"</span>, <span class="string">"男"</span>, <span class="number">19</span>));</span><br><span class="line">       personList.add(<span class="keyword">new</span> Person(<span class="number">23</span>, <span class="string">"wang si"</span>, <span class="string">"女"</span>, <span class="number">20</span>));</span><br><span class="line">       personList.add(<span class="keyword">new</span> Person(<span class="number">60</span>, <span class="string">"zhao wu"</span>, <span class="string">"男 "</span>, <span class="number">20</span>));</span><br><span class="line">       personList.add(<span class="keyword">new</span> Person(<span class="number">88</span>, <span class="string">"chen liu"</span>, <span class="string">"男"</span>, <span class="number">21</span>));</span><br><span class="line"></span><br><span class="line">       intList = Arrays.asList(<span class="keyword">new</span> Integer[]&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">2</span>, <span class="number">3</span>&#125;);</span><br><span class="line"></span><br><span class="line">       strList = Arrays.asList(<span class="keyword">new</span> String[]&#123;<span class="string">"A"</span>, <span class="string">"S"</span>, <span class="string">"D"</span>, <span class="string">"F"</span>, <span class="string">"X"</span>, <span class="string">"C"</span>, <span class="string">"Y"</span>, <span class="string">"H"</span>, <span class="string">""</span>, <span class="keyword">null</span>&#125;);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 <h3 id="1-forEach-迭代-for-循环"><a href="#1-forEach-迭代-for-循环" class="headerlink" title="1.   forEach 迭代( for 循环)"></a>1. <font color="Green">  forEach</font> 迭代( for 循环)</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">    * foreach 循环</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="meta">@Test</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">foreach</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       <span class="comment">//方法引用</span></span><br><span class="line">       personList.stream().forEach(System.out::println);</span><br><span class="line">       System.out.println(<span class="string">"================================="</span>);</span><br><span class="line">       <span class="comment">//lambda表达</span></span><br><span class="line">       personList.stream().forEach(x -&gt; System.out.println(x));</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 <h3 id="2-filter-过滤条件-筛选条件"><a href="#2-filter-过滤条件-筛选条件" class="headerlink" title="2.  filter 过滤条件 (筛选条件)"></a>2. <font color="Green"> filter</font> 过滤条件 (筛选条件)</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">    * filter 过滤条件</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="meta">@Test</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testFilter</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       personList.stream()</span><br><span class="line">               .filter(x -&gt; StrUtil.equals(<span class="string">"男"</span>, x.getSex()))</span><br><span class="line">               .collect(Collectors.toList())</span><br><span class="line">               .forEach(System.out::println);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 过滤多重条件</span></span><br><span class="line"><span class="comment">    * 场景 当你大集合某些条件必要筛选 子集合也需要筛选 保留 可以使用以下</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="meta">@Test</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">lixiang</span><span class="params">()</span> </span>&#123;</span><br><span class="line">   String json = <span class="string">"[&#123;\"orderType\":\"zhongmin\",\"mult\":\"1\",\"largePolicy\":\"\",\"endDate\":\"2019-04-13 23:59:59\",\"orderStatus\":\"19\",\"renewalCount\":\"0\",\"signDate\":\"2019-05-01 18:05:00\",\"idNo\":\"320924199506194371\",\"productName\":\"安达悠享全球（含申根）保险（中民版）\",\"orderAmount\":\"35.00\",\"memberId\":\"\",\"insuredList\":[&#123;\"birthday\":\"Sun Jan 01 00:00:00 CST 1995\",\"insuredSex\":\"0\",\"insuredIdNo\":\"110101199501012068\",\"insuredIdType\":\"0\",\"relationToAppnt\":\"11\",\"insuredName\":\"被保人\",\"socialSecurity\":\"\"&#125;],\"orderNo\":\"860020190409697132\",\"idType\":\"0\",\"campaignId\":\"\",\"cvaliDate\":\"2019-02-10 00:00:00\",\"mobile\":\"17701657103\",\"renewalStatus\":\"0\",\"contNo\":\"ITACNZM02311083\",\"liabilityList\":[&#123;\"ccsLiabilityCode\":\"113504201\",\"amount\":\"\",\"shareInsurance\":\"1\",\"premium\":\"\",\"deductiblesRatio\":\"0\",\"serviceCode\":\"\",\"deductibles\":\"0\",\"ccsLiabilityName\":\"签证拒签（申根国家）\"&#125;],\"planCode\":\"8601\",\"surrenderAmt\":\"\",\"cvaliOutDate\":\"2019-04-18 23:59:59\",\"productCode\":\"86\",\"sourceType\":\"\",\"lixiang\":\"2019-04-10 00:00:00\",\"name\":\"袁浩\",\"paymentMethod\":\"02\",\"houseAddress\":\"\"&#125;]\n"</span>;</span><br><span class="line">       List&lt;QueryCommonPolicyResponseDTO&gt; list = JSONUtil.toList(JSONUtil.parseArray(json),  QueryCommonPolicyResponseDTO.class);</span><br><span class="line">       list.forEach(o -&gt;&#123;</span><br><span class="line">           <span class="keyword">if</span> (DateUtil.between( DateUtil.parse(o.getCvaliDate(), <span class="string">"yyyy-MM-dd HH:mm:ss"</span>),</span><br><span class="line">                   DateUtil.parse(o.getLixiang(),<span class="string">"yyyy-MM-dd HH:mm:ss"</span>), DateUnit.DAY)&lt;=<span class="number">60</span>)&#123;</span><br><span class="line">               o.getLiabilityList().stream().filter(s -&gt; StrUtil.equals(<span class="string">"签证拒签（申根国家）"</span>, s.getCcsLiabilityName()))</span><br><span class="line">                       .collect(Collectors.toList());</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;);</span><br><span class="line">       List&lt;QueryCommonPolicyResponseDTO&gt; collect = list.stream().filter(o -&gt; &#123;</span><br><span class="line">           <span class="keyword">if</span> (DateUtil.between(DateUtil.parse(o.getCvaliDate(), <span class="string">"yyyy-MM-dd HH:mm:ss"</span>),</span><br><span class="line">                   DateUtil.parse(o.getLixiang(), <span class="string">"yyyy-MM-dd HH:mm:ss"</span>), DateUnit.DAY) &lt;= <span class="number">60</span>) &#123;</span><br><span class="line">               o.getLiabilityList().stream().filter(s -&gt; StrUtil.equals(<span class="string">"签证拒签（申根国家）"</span>, s.getCcsLiabilityName()))</span><br><span class="line">                       .collect(Collectors.toList());</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">       &#125;).collect(Collectors.toList());</span><br><span class="line">       System.out.println(JSONUtil.toJsonStr(collect));</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 <h3 id="3-limit-分页"><a href="#3-limit-分页" class="headerlink" title="3. limit 分页"></a>3. limit 分页</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">   * limit 分页</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="meta">@Test</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">limit</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    personList.stream().limit(<span class="number">3</span>).collect(Collectors.toList()).forEach(System.out::println);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 <h3 id="4-sorted-排序"><a href="#4-sorted-排序" class="headerlink" title="4.  sorted 排序"></a>4. <font color="Green"> sorted</font> 排序</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">     * sorted 排序 数组</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sorted</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//数组正序</span></span><br><span class="line">        intList.stream().sorted().collect(Collectors.toList()).forEach(System.out::println);</span><br><span class="line">        <span class="comment">//数组到序</span></span><br><span class="line">        intList.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList()).forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//字符串 自然顺序排序</span></span><br><span class="line">        strList.stream().sorted(Comparator.nullsLast(Comparator.naturalOrder())).collect(Collectors.toList()).forEach(System.out::println);</span><br><span class="line">        <span class="comment">//字符串 倒序</span></span><br><span class="line">        strList.stream().sorted(Comparator.nullsLast(Comparator.reverseOrder())).collect(Collectors.toList()).forEach(System.out::println);</span><br><span class="line">        <span class="comment">// 集合对象排序</span></span><br><span class="line">        <span class="comment">//正序</span></span><br><span class="line">        personList.stream().sorted(Comparator.comparing(Person::getId)).collect(Collectors.toList()).forEach(System.out::println);</span><br><span class="line">        <span class="comment">//倒序</span></span><br><span class="line">        personList.stream().sorted(Comparator.comparing(Person::getId).reversed()).collect(Collectors.toList()).forEach(System.out::println);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <h3 id="5-Map-K-V形式"><a href="#5-Map-K-V形式" class="headerlink" title="5.  Map  K,V形式"></a>5. <font color="Green"> Map</font>  K,V形式</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">    * map</span></span><br><span class="line"><span class="comment">    * k，v 形式</span></span><br><span class="line"><span class="comment">    * 对每个元素进行处理，</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="meta">@Test</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">map</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       intList.stream().map(e -&gt; e).collect(Collectors.toList()).forEach(System.out::println);</span><br><span class="line">       strList.stream().map(e -&gt; e + <span class="number">2</span>).collect(Collectors.toList()).forEach(System.out::println);</span><br><span class="line">       personList.stream().map(x -&gt; x).collect(Collectors.toList()).forEach(System.out::println);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
