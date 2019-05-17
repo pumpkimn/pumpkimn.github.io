@@ -141,6 +141,92 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2018-12-27-maven" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/08/2018-12-27-maven/">Maven</a>
+    </h1>
+  
+
+        
+        <a href="/2018/11/08/2018-12-27-maven/" class="archive-article-date">
+  	<time datetime="2018-11-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h1><h2 id="管理jar包"><a href="#管理jar包" class="headerlink" title="管理jar包"></a>管理jar包</h2><p>因为maven 中央仓库在国外 所以设置阿里的中央仓库地址 在Maven下的setting.xml文件中mirror节点 添加下面子节点.<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;mirror&gt;</span><br><span class="line">    &lt;id&gt;nexus-aliyun&lt;/id&gt;</span><br><span class="line">    &lt;mirrorOf&gt;*&lt;/mirrorOf&gt;</span><br><span class="line">    &lt;name&gt;Nexus aliyun&lt;/name&gt;</span><br><span class="line">    &lt;url&gt;http:<span class="comment">//maven.aliyun.com/nexus/content/groups/public&lt;/url&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="生成war包"><a href="#生成war包" class="headerlink" title="生成war包"></a>生成war包</h2><p>idea 在控制台输出<font color="blue">mvn clean package</font> 或者直接在Maven Projects中选择<font color="blue">package</font> 就行了. 接着在target找到已生成的war包.</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/maven/" class="article-tag-list-link color1">maven</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/11/08/2018-12-27-maven/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2018-11-07-python" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
