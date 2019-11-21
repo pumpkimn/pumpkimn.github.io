@@ -8,21 +8,21 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>TCP/IP整理 | 李想</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="分层12345678910111213应用层：网络服务与最终用户的一个接口。表示层：数据的表示、安全、压缩。会话层：建立、管理、终止会话。传输层：定义传输数据的协议端口号，以及流控和差错校验。网络层：进行逻辑地址寻址，实现不同网络之间的路径选择。数据链路层：建立逻辑连接、进行硬件地址寻址、差错校验等功能。物理层：建立、维护、断开物理连接 在这本经典书籍里面这本书TCP/IP详解 卷一中，网络协议通">
+  <meta name="description" content="什么是网络协议？协议是一种规范约束 例如： 人类语言是人与人之间交流的协议编程语言是人与计算机之间的协议(人类能够读懂，计算机能够执行)网络协议即为计算机与计算机之间沟通交流的协议 协议三要素：  语法，即符合一定的规则和格式 语义，即代表某种意义 顺序  为什么要分层？程序员很好理解，复杂的程序都需要分层，目的是解耦，每层专注于自己负责的事情。就想Web开发中，服务端也会分Controller、">
 <meta name="keywords" content="随笔">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TCP&#x2F;IP整理">
 <meta property="og:url" content="http://yoursite.com/2019/04/09/2019-04-09-TCP-IP/index.html">
 <meta property="og:site_name" content="李想">
-<meta property="og:description" content="分层12345678910111213应用层：网络服务与最终用户的一个接口。表示层：数据的表示、安全、压缩。会话层：建立、管理、终止会话。传输层：定义传输数据的协议端口号，以及流控和差错校验。网络层：进行逻辑地址寻址，实现不同网络之间的路径选择。数据链路层：建立逻辑连接、进行硬件地址寻址、差错校验等功能。物理层：建立、维护、断开物理连接 在这本经典书籍里面这本书TCP/IP详解 卷一中，网络协议通">
+<meta property="og:description" content="什么是网络协议？协议是一种规范约束 例如： 人类语言是人与人之间交流的协议编程语言是人与计算机之间的协议(人类能够读懂，计算机能够执行)网络协议即为计算机与计算机之间沟通交流的协议 协议三要素：  语法，即符合一定的规则和格式 语义，即代表某种意义 顺序  为什么要分层？程序员很好理解，复杂的程序都需要分层，目的是解耦，每层专注于自己负责的事情。就想Web开发中，服务端也会分Controller、">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/img/1554704819504.png">
 <meta property="og:image" content="http://yoursite.com/img/1554693990562.png">
 <meta property="og:image" content="http://yoursite.com/img/1554706044009.png">
-<meta property="og:updated_time" content="2019-04-10T02:40:10.893Z">
+<meta property="og:updated_time" content="2019-09-16T07:01:56.095Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TCP&#x2F;IP整理">
-<meta name="twitter:description" content="分层12345678910111213应用层：网络服务与最终用户的一个接口。表示层：数据的表示、安全、压缩。会话层：建立、管理、终止会话。传输层：定义传输数据的协议端口号，以及流控和差错校验。网络层：进行逻辑地址寻址，实现不同网络之间的路径选择。数据链路层：建立逻辑连接、进行硬件地址寻址、差错校验等功能。物理层：建立、维护、断开物理连接 在这本经典书籍里面这本书TCP/IP详解 卷一中，网络协议通">
+<meta name="twitter:description" content="什么是网络协议？协议是一种规范约束 例如： 人类语言是人与人之间交流的协议编程语言是人与计算机之间的协议(人类能够读懂，计算机能够执行)网络协议即为计算机与计算机之间沟通交流的协议 协议三要素：  语法，即符合一定的规则和格式 语义，即代表某种意义 顺序  为什么要分层？程序员很好理解，复杂的程序都需要分层，目的是解耦，每层专注于自己负责的事情。就想Web开发中，服务端也会分Controller、">
 <meta name="twitter:image" content="http://yoursite.com/img/1554704819504.png">
   
   
@@ -165,7 +165,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="分层"><a href="#分层" class="headerlink" title="分层"></a>分层</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">应用层：网络服务与最终用户的一个接口。</span><br><span class="line"></span><br><span class="line">表示层：数据的表示、安全、压缩。</span><br><span class="line"></span><br><span class="line">会话层：建立、管理、终止会话。</span><br><span class="line"></span><br><span class="line">传输层：定义传输数据的协议端口号，以及流控和差错校验。</span><br><span class="line"></span><br><span class="line">网络层：进行逻辑地址寻址，实现不同网络之间的路径选择。</span><br><span class="line"></span><br><span class="line">数据链路层：建立逻辑连接、进行硬件地址寻址、差错校验等功能。</span><br><span class="line"></span><br><span class="line">物理层：建立、维护、断开物理连接</span><br></pre></td></tr></table></figure>
+        <h2 id="什么是网络协议？"><a href="#什么是网络协议？" class="headerlink" title="什么是网络协议？"></a>什么是网络协议？</h2><p>协议是一种规范约束</p>
+<p>例如：</p>
+<p>人类语言是人与人之间交流的协议<br>编程语言是人与计算机之间的协议(人类能够读懂，计算机能够执行)<br>网络协议即为计算机与计算机之间沟通交流的协议</p>
+<p>协议三要素：</p>
+<ul>
+<li>语法，即符合一定的规则和格式</li>
+<li>语义，即代表某种意义</li>
+<li>顺序</li>
+</ul>
+<h2 id="为什么要分层？"><a href="#为什么要分层？" class="headerlink" title="为什么要分层？"></a>为什么要分层？</h2><p>程序员很好理解，复杂的程序都需要分层，目的是解耦，每层专注于自己负责的事情。就想Web开发中，服务端也会分Controller、Service、Dao等层，同样的道理。</p>
+<h2 id="“网络”如何工作的？"><a href="#“网络”如何工作的？" class="headerlink" title="“网络”如何工作的？"></a>“网络”如何工作的？</h2><p><a href="[https://leohuachao.me/2018/06/15/%E8%B6%A3%E8%B0%88%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE-%E7%AC%94%E8%AE%B01/](https://leohuachao.me/2018/06/15/趣谈网络协议-笔记1/">参考此博客</a>)</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>只要是在网络上跑的包，都是完整的。可以有下层没上层，绝对不可有上层没下层</p>
+<p>对 TCP 协议来说，三次握手也好，重试也好，只要想发出去包，就要有IP层和MAC层，不然是发不出去的</p>
+<h2 id="分层"><a href="#分层" class="headerlink" title="分层"></a>分层</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">应用层：网络服务与最终用户的一个接口。</span><br><span class="line"></span><br><span class="line">表示层：数据的表示、安全、压缩。</span><br><span class="line"></span><br><span class="line">会话层：建立、管理、终止会话。</span><br><span class="line"></span><br><span class="line">传输层：定义传输数据的协议端口号，以及流控和差错校验。</span><br><span class="line"></span><br><span class="line">网络层：进行逻辑地址寻址，实现不同网络之间的路径选择。</span><br><span class="line"></span><br><span class="line">数据链路层：建立逻辑连接、进行硬件地址寻址、差错校验等功能。</span><br><span class="line"></span><br><span class="line">物理层：建立、维护、断开物理连接</span><br></pre></td></tr></table></figure>
 <p><img src="/img/1554704819504.png" alt="1554704819504">在这本经典书籍里面这本书<strong>TCP/IP详解 卷一</strong>中，网络协议通常分不同层次进行开发，每一层分别负责不同的通信功能。一个协议族，比如 T C P / I P，是<br>一组不同层次上的多个协议的组合。 T C P / I P通常被认<br>为是一个四层协议系统，每一层负责不同的功能。</p>
 <h3 id="链路层"><a href="#链路层" class="headerlink" title="链路层"></a>链路层</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">有时也称作数据链路层或者网络接口层，通常包括操作系统中的设备驱动程序和计算机中对应的网络接口层。主要负责处理网络传输的物理接口（电缆）。</span><br></pre></td></tr></table></figure>
 <h3 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">也可以叫做互联网层，负责处理分组在网络中分组的活动，例如分组的选路(物流分发中心，根据某个地址分发到某区域)。网络协议层有IP协议（网际协议），ICMP协议（Internet互联网控制报文协议）以及IGMP协议（Internet组管理协议）。</span><br></pre></td></tr></table></figure>
